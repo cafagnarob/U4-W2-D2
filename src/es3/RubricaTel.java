@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RubricaTel {
-    public HashMap<String, String> nomeRubrica = new HashMap<>();
     private Map<String, String> contatti;
 
     public RubricaTel() {
@@ -26,10 +25,10 @@ public class RubricaTel {
         if (contatti.containsKey(nome)) {
             contatti.remove(nome);
             System.out.println("------ contatto eliminato-----");
-            System.out.println(nome);
+            System.out.println(contatti);
         } else {
 
-            System.out.println("------ contatto non esistenze-----");
+            System.out.println("------ contatto non esiste-----");
         }
     }
 
@@ -49,8 +48,12 @@ public class RubricaTel {
     }
 
     public void stampaTuttiContatti() {
-        for (Map.Entry<String, String> contatto : contatti.entrySet()) {
-            System.out.println("nome=" + contatto.getKey() + "- telefono=" + contatto.getValue());
+        if (contatti.isEmpty()) {
+            System.out.println("------- contatti vuoto------");
+        } else {
+            for (Map.Entry<String, String> contatto : contatti.entrySet()) {
+                System.out.println("nome=" + contatto.getKey() + "- telefono=" + contatto.getValue());
+            }
         }
     }
 

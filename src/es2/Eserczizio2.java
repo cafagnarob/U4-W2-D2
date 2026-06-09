@@ -1,11 +1,12 @@
 package es2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class Eserczizio2 {
 
-    Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
 
     public static void main(String[] args) {
         List<Integer> primaLista = getRandomNum(3);
@@ -18,7 +19,7 @@ public class Eserczizio2 {
     }
 
     public static List<Integer> getRandomNum(int N) {
-        Scanner scanner = new Scanner(System.in);
+        
         Random random = new Random();
 
         List<Integer> lista = new ArrayList<>();
